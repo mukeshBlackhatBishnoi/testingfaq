@@ -36,7 +36,28 @@ const MyApp = ({ Component, pageProps }: props) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: `
-                ${faqSchema}
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Why should I use biometric attendance software?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Here are some reasons why you should consider using Unolo Biometric: Increased Accuracy and Reduced Errors: Facial recognition eliminates buddy punching and manual attendance monitoring mistakes, ensuring accurate payroll calculations and reducing administrative burdens. Enhanced Security and Transparency: Facial verification ensures only authorised individuals can access the system, boosting security and promoting employee accountability. Real-time Insights and Improved Efficiency: Monitor staff presence in real-time across locations, optimise scheduling and resource allocation, and gain valuable insights into workforce patterns for informed decision-making. Convenience and Ease of Use: Ditch time cards and complex hardware. Employees simply use their smartphone or tablet to 'punch in' with a smile, saving time and simplifying the process. Streamlined Payroll and Reduced Costs: Automatic data capture and accurate attendance records translate to smoother payroll processing, minimising errors and associated costs. Peace of Mind and Data Security: Advanced encryption and cloud-based storage protect sensitive employee data, offering peace of mind and compliance with data privacy regulations. Ultimately, Unolo Biometric offers a modern and efficient solution to traditional attendance management practices."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does the software work with my existing devices?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely! You don't need any special hardware. Simply download the 'Unolo Biometric' app on your preferred tablet and you're good to go."
+                }
+              }
+            ]
+          }
               `,
         }}
       />
