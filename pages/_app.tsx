@@ -5,7 +5,7 @@ interface props {
   Component: any,
   pageProps: any
 }
-const faqSchema = {
+const faqSchema = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -26,13 +26,13 @@ const faqSchema = {
       }
     }
   ]
-}
+})
 const MyApp = ({ Component, pageProps }: props) => {
   console.log(faqSchema)
   return <Fragment>
     <Head>
       <title>Unolo Biometric | Facial Recognition Attendance Software/App</title>
-      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      <script type="application/ld+json">faqSchema</script>
       <meta name="description" content="Unolo Biometric is an advanced facial recognition attendance software/app that eliminates buddy punching & ensures accurate attendance" />
     </Head>
     <main>
