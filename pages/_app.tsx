@@ -5,7 +5,7 @@ interface props {
   Component: any,
   pageProps: any
 }
-const faqSchema = JSON.stringify({
+const faqSchema: any = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -26,7 +26,7 @@ const faqSchema = JSON.stringify({
       }
     }
   ]
-})
+}
 const MyApp = ({ Component, pageProps }: props) => {
   console.log(faqSchema)
   return <Fragment>
