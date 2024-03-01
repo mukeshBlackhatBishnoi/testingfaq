@@ -32,7 +32,7 @@ const MyApp = ({ Component, pageProps }: props) => {
   return <Fragment>
     <Head>
       <title>Unolo Biometric | Facial Recognition Attendance Software/App</title>
-      <script type="application/ld+json">faqSchema</script>
+      <script type="application/ld+json">{faqSchema}</script>
       <meta name="description" content="Unolo Biometric is an advanced facial recognition attendance software/app that eliminates buddy punching & ensures accurate attendance" />
     </Head>
     <main>
